@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image_Gallery</title>
+    <link rel="stylesheet" href="pro1.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 >IMAGE GALLERY</h1>
+
+      <div class="img_gallery">
+        <div class="image">
+          <img src="architecture-g64ee74291_1920.jpg" />
+        </div>
+        <div class="image"><img src="cook-3155248_1280.jpg" /></div>
+        <div class="image">
+          <img src="pexels-hiure-gomes-fernandes-11094173.jpg" />
+        </div>
+        <div class="image"><img src="delivery-6974508_1280.jpg" /></div>
+        <div class="image">
+          <img src="pexels-josh-sorenson-1546896.jpg" />
+        </div>
+        <div class="image"><img src="van-ge4b1af2b7_1920.jpg" /></div>
+        <div class="image"><img src="1724655596243.jpg" /></div>
+        <div class="image"><img src="1724655980724.jpg" /></div>
+        <div class="image"><img src="harrypotter12.jpg" /></div>
+      </div>
+
+      <div class="full_img">
+        <span>&times;</span>
+        <img src="harrypotter12.jpg" />
+      </div>
+
+    </div>
+
+    <script>
+      document.querySelectorAll('.img_gallery img').forEach((image) => {
+        image.onclick = () => {
+          document.querySelector('.full_img').style.display = 'block';
+          document.querySelector('.full_img img').src =
+            image.getAttribute('src');
+        };
+      });
+
+      document.querySelector('.full_img span').onclick = () => {
+        document.querySelector('.full_img').style.display = 'none';
+      }
+
+    </script>
+  </body>
+</html>
